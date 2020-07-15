@@ -1,0 +1,27 @@
+@url=http://localhost:3000/api
+@json=Content-Type: application/json
+
+###所有用户
+GET {{url}}/users
+
+###注册 请求体上面一定要有空格
+POST {{url}}/register
+{{json}}
+
+{
+  "username":"lyz3",
+  "password":"123456"
+}
+
+###登录
+POST  {{url}}/login
+{{json}}
+
+{
+  "username":"lyz3",
+  "password":"123456"
+}
+
+###查询个人信息
+GET  {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMGViMTJkNjFhMDFkMDVjODc3ZTdjNyIsImlhdCI6MTU5NDc5OTkyNn0.yCN848P7IH6e5wpX5ZrM4H0bIm6xPHHZPbIE7Zy2vwE
